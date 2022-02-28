@@ -13,31 +13,42 @@ struct HomeView: View {
     @State var IsMappView : Bool = false
     
     var body: some View {
-        if model.resturants.count != 0 && model.sights.count != 0
+        NavigationView
         {
-            VStack
+        
+            if model.resturants.count != 0 && model.sights.count != 0
             {
-                HStack
+                VStack
                 {
+                    HStack
+                    {
+                        if IsMappView == false
+                        {
+                            Image(systemName: "mapping")
+                            Text("Randolph,NJ").bold().font(.title3)
+                            Spacer()
+                            Text("Switch To Map Vew").foregroundColor(.blue).font(.headline).opacity(0.8)
+                        }
+                        else
+                        {
+                            Text("Switch To List Vew").foregroundColor(.blue).font(.headline).opacity(0.8)
+                        }
+                    }
+                    Divider()
                     if IsMappView == false
                     {
-                        Image(systemName: "mapping")
-                        Text("Randolph,NJ").bold().font(.title3)
-                        Spacer()
-                        Text("Switch To List Vew").foregroundColor(.blue).font(.headline).opacity(0.8)
-                    }
-                    else
-                    {
-                        Text("Switch To Map Vew").foregroundColor(.blue).font(.headline).opacity(0.8)
+                        BusinessListView()
                     }
                 }
-                Divider()
-                BusinessListView()
+                .foregroundColor(.black)
+                .navigationBarHidden(true)
+                
+               
             }
-        }
-        else
-        {
-            ProgressView()
+            else
+            {
+                ProgressView()
+            }
         }
     }
     

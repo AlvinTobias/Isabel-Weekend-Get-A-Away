@@ -56,6 +56,8 @@ class ContentModel : NSObject, ObservableObject, CLLocationManagerDelegate  {
         
     }
     
+   
+    
     func getYelpData(category : String,location : CLLocation )
     {
         
@@ -92,6 +94,14 @@ class ContentModel : NSObject, ObservableObject, CLLocationManagerDelegate  {
                         let jsondecode = JSONDecoder()
                         let result = try jsondecode.decode(businessSearch.self, from: data!)
                         //INSTEAD OF THE BACKGROUND JOB TO UPDATE THE MAIN UI SET THE MAIN THREAD TO HANDLE THIS
+                        
+                        for b in result.businesses {
+                            
+                            b.getImageDataFromUrl()
+                            
+                        }
+                        
+                        
                         
                         DispatchQueue.main.async {
                             if(category == "restaurants")
