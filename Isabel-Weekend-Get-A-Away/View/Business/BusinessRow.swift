@@ -15,7 +15,7 @@ struct BusinessRow: View {
     var body: some View {
         
         NavigationLink {
-            BusinessDetail()
+            BusinessDetail(businessModel: businessModel)
         } label: {
             HStack{
                 

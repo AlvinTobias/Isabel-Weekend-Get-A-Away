@@ -48,6 +48,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED18BCD727CD644E0087FB4B /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				ED5FF4CA27CA905400B8A440 /* BusinessListView.swift */,
+				ED5FF4CC27CA963B00B8A440 /* BusinessSectionView.swift */,
+				ED5FF4CE27CAB7ED00B8A440 /* BusinessSectionHeader.swift */,
+				ED18BCD327CC4F220087FB4B /* BusinessRow.swift */,
+				ED18BCD527CD61E90087FB4B /* BusinessDetail.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
 		ED5831F527C3C462004B5DEC = {
 			isa = PBXGroup;
 			children = (
@@ -104,13 +116,9 @@
 		ED58321127C3C4D0004B5DEC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ED18BCD727CD644E0087FB4B /* Business */,
 				ED58320327C3C462004B5DEC /* Launch.swift */,
 				EDD8AC6E27CA5D9300B818DF /* HomeView.swift */,
-				ED5FF4CA27CA905400B8A440 /* BusinessListView.swift */,
-				ED5FF4CC27CA963B00B8A440 /* BusinessSectionView.swift */,
-				ED5FF4CE27CAB7ED00B8A440 /* BusinessSectionHeader.swift */,
-				ED18BCD327CC4F220087FB4B /* BusinessRow.swift */,
-				ED18BCD527CD61E90087FB4B /* BusinessDetail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
