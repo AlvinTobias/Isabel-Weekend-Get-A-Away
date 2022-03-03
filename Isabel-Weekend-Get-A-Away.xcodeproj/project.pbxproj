@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED18BCD427CC4F220087FB4B /* BusinessRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED18BCD327CC4F220087FB4B /* BusinessRow.swift */; };
 		ED18BCD627CD61E90087FB4B /* BusinessDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED18BCD527CD61E90087FB4B /* BusinessDetail.swift */; };
+		ED4022BA27D0E64C00B76B86 /* BusinessMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4022B927D0E64C00B76B86 /* BusinessMap.swift */; };
 		ED58320227C3C462004B5DEC /* Isabel_Weekend_Get_A_AwayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58320127C3C462004B5DEC /* Isabel_Weekend_Get_A_AwayApp.swift */; };
 		ED58320427C3C462004B5DEC /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58320327C3C462004B5DEC /* Launch.swift */; };
 		ED58320627C3C463004B5DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED58320527C3C463004B5DEC /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		ED18BCD327CC4F220087FB4B /* BusinessRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRow.swift; sourceTree = "<group>"; };
 		ED18BCD527CD61E90087FB4B /* BusinessDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetail.swift; sourceTree = "<group>"; };
+		ED4022B927D0E64C00B76B86 /* BusinessMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMap.swift; sourceTree = "<group>"; };
 		ED5831FE27C3C462004B5DEC /* Isabel-Weekend-Get-A-Away.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Isabel-Weekend-Get-A-Away.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED58320127C3C462004B5DEC /* Isabel_Weekend_Get_A_AwayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Isabel_Weekend_Get_A_AwayApp.swift; sourceTree = "<group>"; };
 		ED58320327C3C462004B5DEC /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 				ED18BCD527CD61E90087FB4B /* BusinessDetail.swift */,
 			);
 			path = Business;
+			sourceTree = "<group>";
+		};
+		ED4022B427D0E59800B76B86 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				ED4022B927D0E64C00B76B86 /* BusinessMap.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		ED5831F527C3C462004B5DEC = {
@@ -116,6 +126,7 @@
 		ED58321127C3C4D0004B5DEC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ED4022B427D0E59800B76B86 /* Map */,
 				ED18BCD727CD644E0087FB4B /* Business */,
 				ED58320327C3C462004B5DEC /* Launch.swift */,
 				EDD8AC6E27CA5D9300B818DF /* HomeView.swift */,
@@ -202,6 +213,7 @@
 				ED18BCD627CD61E90087FB4B /* BusinessDetail.swift in Sources */,
 				ED5FF4CB27CA905400B8A440 /* BusinessListView.swift in Sources */,
 				ED58321327C3C4ED004B5DEC /* ContentModel.swift in Sources */,
+				ED4022BA27D0E64C00B76B86 /* BusinessMap.swift in Sources */,
 				ED5FF4CD27CA963B00B8A440 /* BusinessSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

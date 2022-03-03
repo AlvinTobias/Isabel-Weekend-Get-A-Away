@@ -22,28 +22,48 @@ struct HomeView: View {
                 {
                     HStack
                     {
-                        if IsMappView == false
-                        {
                             Image(systemName: "mapping")
                             Text("Randolph,NJ").bold().font(.title3)
                             Spacer()
-                            Text("Switch To Map Vew").foregroundColor(.blue).font(.headline).opacity(0.8)
-                        }
-                        else
-                        {
-                            Text("Switch To List Vew").foregroundColor(.blue).font(.headline).opacity(0.8)
-                        }
+                            
+                            Button {
+                                
+                                if IsMappView == false
+                                {
+                                    IsMappView = true
+                                }
+                                else
+                                {
+                                   IsMappView = false
+                                }
+                                
+                            } label: {
+                                if IsMappView == false
+                                {
+                                    Text("Switch To Map Vew").foregroundColor(.blue).font(.headline).opacity(0.8)
+                                }
+                                else
+                                {
+                                    Text("Switch To List Vew").foregroundColor(.blue).font(.headline).opacity(0.8)
+                                }
+                            }
                     }
                     Divider()
                     if IsMappView == false
                     {
                         BusinessListView()
                     }
+                    else
+                    {
+                        BusinessMap()
+                    }
+                    
                 }
                 .foregroundColor(.black)
                 .navigationBarHidden(true)
                 
                
+            
             }
             else
             {
