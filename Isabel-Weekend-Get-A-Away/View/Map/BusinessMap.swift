@@ -35,6 +35,7 @@ struct BusinessMap : UIViewRepresentable {
         mapView.showsUserLocation = true
         mapView.userTrackingMode = MKUserTrackingMode.followWithHeading
         
+        mapView.delegate = context.coordinator
         
         return mapView
     }
@@ -50,9 +51,43 @@ struct BusinessMap : UIViewRepresentable {
     
     static func dismantleUIView(_ uiView: MKMapView, coordinator: ()) {
         
+        uiView.removeAnnotations(uiView.annotations)
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        
+        return Coordinator()
         
     }
     
+    class Coordinator : NSObject, MKMapViewDelegate
+    {
+        
+        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            
+            if annotation is MKUserLocation
+            {
+                return nil
+            }
+            
+            var mkAnnotionView = mapView.dequeueReusableAnnotationView(withIdentifier: "Business")
+            if mkAnnotionView == nil
+            {
+                mkAnnotionView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "Business")
+                mkAnnotionView!.canShowCallout = true
+                mkAnnotionView!.rightCalloutAccessoryView = UIButton(type: UIButton.ButtonType.detailDisclosure)
+                
+            }
+            else
+            {
+                mkAnnotionView!.annotation = annotation
+            }
+           
+            return mkAnnotionView
+        }
+        
+        
+    }
     
     
 }
