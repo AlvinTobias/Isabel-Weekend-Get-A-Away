@@ -12,6 +12,8 @@ struct HomeView: View {
     @EnvironmentObject var model : ContentModel
     @State var IsMappView : Bool = false
     
+    @State var businessMapView : business?
+    
     var body: some View {
         NavigationView
         {
@@ -55,10 +57,20 @@ struct HomeView: View {
                     }
                     else
                     {
-                        BusinessMap()
+                        BusinessMap(businessMapdetail: $businessMapView)
+                            .ignoresSafeArea(.all, edges: .all)
+                            .sheet(item: $businessMapView){ business in
+                                BusinessDetail(businessModel: business)
+                            }
+
+//                            .sheet(item: $businessMapView) { Identifiable in
+//                                BusinessDetail(businessModel: businessMapView!)
+//                            }
+                            
                     }
                     
                 }
+                
                 .foregroundColor(.black)
                 .navigationBarHidden(true)
                 
