@@ -60,7 +60,7 @@ struct HomeView: View {
                         BusinessMap(businessMapdetail: $businessMapView)
                             .ignoresSafeArea(.all, edges: .all)
                             .sheet(item: $businessMapView){ business in
-                                BusinessDetail(businessModel: business)
+                                BusinessDetail(businessModel: business,directionview: false)
                             }
 
 //                            .sheet(item: $businessMapView) { Identifiable in

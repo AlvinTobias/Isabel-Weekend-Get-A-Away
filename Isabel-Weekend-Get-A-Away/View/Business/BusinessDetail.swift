@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BusinessDetail: View {
     @ObservedObject var businessModel : business
+    @State var directionview : Bool
     
     var body: some View {
         
@@ -115,6 +116,7 @@ struct BusinessDetail: View {
                     //Button
                     
                     Button {
+                        directionview = true
                         
                     } label: {
                         
@@ -125,6 +127,13 @@ struct BusinessDetail: View {
                                 .cornerRadius(10)
                             Text("Get Direction").foregroundColor(.white).bold()
                         }
+                        .sheet(isPresented: $directionview, onDismiss: {
+                            directionview = false
+                        }, content: {
+                            BusinessMapDirection(businessModel: businessModel)
+                               
+                               
+                        })
                         .padding()
                       
                     }
