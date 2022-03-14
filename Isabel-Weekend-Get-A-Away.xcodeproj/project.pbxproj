@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		ED18BCD427CC4F220087FB4B /* BusinessRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED18BCD327CC4F220087FB4B /* BusinessRow.swift */; };
 		ED18BCD627CD61E90087FB4B /* BusinessDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED18BCD527CD61E90087FB4B /* BusinessDetail.swift */; };
+		ED24B73627DFAEA700E04859 /* OnBoardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24B73527DFAEA700E04859 /* OnBoardScreen.swift */; };
+		ED24B73827DFBB9100E04859 /* DeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24B73727DFBB9100E04859 /* DeniedView.swift */; };
 		ED4022BA27D0E64C00B76B86 /* BusinessMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4022B927D0E64C00B76B86 /* BusinessMap.swift */; };
 		ED58320227C3C462004B5DEC /* Isabel_Weekend_Get_A_AwayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58320127C3C462004B5DEC /* Isabel_Weekend_Get_A_AwayApp.swift */; };
 		ED58320427C3C462004B5DEC /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58320327C3C462004B5DEC /* Launch.swift */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		ED18BCD327CC4F220087FB4B /* BusinessRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRow.swift; sourceTree = "<group>"; };
 		ED18BCD527CD61E90087FB4B /* BusinessDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetail.swift; sourceTree = "<group>"; };
+		ED24B73527DFAEA700E04859 /* OnBoardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardScreen.swift; sourceTree = "<group>"; };
+		ED24B73727DFBB9100E04859 /* DeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeniedView.swift; sourceTree = "<group>"; };
 		ED4022B927D0E64C00B76B86 /* BusinessMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMap.swift; sourceTree = "<group>"; };
 		ED5831FE27C3C462004B5DEC /* Isabel-Weekend-Get-A-Away.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Isabel-Weekend-Get-A-Away.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED58320127C3C462004B5DEC /* Isabel_Weekend_Get_A_AwayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Isabel_Weekend_Get_A_AwayApp.swift; sourceTree = "<group>"; };
@@ -64,6 +68,16 @@
 				ED18BCD527CD61E90087FB4B /* BusinessDetail.swift */,
 			);
 			path = Business;
+			sourceTree = "<group>";
+		};
+		ED24B73427DFAE7B00E04859 /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				EDD8AC6E27CA5D9300B818DF /* HomeView.swift */,
+				ED24B73527DFAEA700E04859 /* OnBoardScreen.swift */,
+				ED24B73727DFBB9100E04859 /* DeniedView.swift */,
+			);
+			path = Onboard;
 			sourceTree = "<group>";
 		};
 		ED4022B427D0E59800B76B86 /* Map */ = {
@@ -132,10 +146,10 @@
 		ED58321127C3C4D0004B5DEC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ED24B73427DFAE7B00E04859 /* Onboard */,
 				ED4022B427D0E59800B76B86 /* Map */,
 				ED18BCD727CD644E0087FB4B /* Business */,
 				ED58320327C3C462004B5DEC /* Launch.swift */,
-				EDD8AC6E27CA5D9300B818DF /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,8 +227,10 @@
 				ED5FF4CF27CAB7ED00B8A440 /* BusinessSectionHeader.swift in Sources */,
 				ED58320427C3C462004B5DEC /* Launch.swift in Sources */,
 				EDD8AC6D27C8F5C200B818DF /* BusinessSearch.swift in Sources */,
+				ED24B73627DFAEA700E04859 /* OnBoardScreen.swift in Sources */,
 				ED58320227C3C462004B5DEC /* Isabel_Weekend_Get_A_AwayApp.swift in Sources */,
 				EDD8AC6F27CA5D9300B818DF /* HomeView.swift in Sources */,
+				ED24B73827DFBB9100E04859 /* DeniedView.swift in Sources */,
 				ED18BCD427CC4F220087FB4B /* BusinessRow.swift in Sources */,
 				ED18BCD627CD61E90087FB4B /* BusinessDetail.swift in Sources */,
 				EDC506A127DB748700E9C4A6 /* BusinessMapDirection.swift in Sources */,

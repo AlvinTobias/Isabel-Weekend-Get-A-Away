@@ -24,16 +24,24 @@ class ContentModel : NSObject, ObservableObject, CLLocationManagerDelegate  {
         locationManager.delegate = self
         
         //REQUEST THE USER FOR PERMISSION
-        locationManager.requestWhenInUseAuthorization()
+       // locationManager.requestWhenInUseAuthorization()
         
     
         
+    }
+    func requetUIUserAutorization()
+    {
+        locationManager.requestWhenInUseAuthorization()
     }
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         
         if(locationManager.authorizationStatus == CLAuthorizationStatus.authorizedAlways || locationManager.authorizationStatus == CLAuthorizationStatus.authorizedWhenInUse)
         {
             locationManager.startUpdatingLocation()
+        }
+        if(locationManager.authorizationStatus == CLAuthorizationStatus.denied)
+        {
+            locationState = CLAuthorizationStatus.denied
         }
         
     }

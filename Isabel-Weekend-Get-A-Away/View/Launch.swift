@@ -12,7 +12,7 @@ struct Launch: View {
 var body: some View {
         if model.locationState == CLAuthorizationStatus.notDetermined
         {
-            
+            OnBoardScreen()
         }
         else if model.locationState == CLAuthorizationStatus.authorizedAlways ||
                     model.locationState == CLAuthorizationStatus.authorizedWhenInUse
@@ -21,7 +21,7 @@ var body: some View {
         }
         else
         {
-            
+            DeniedView()
         }
     }
 }
